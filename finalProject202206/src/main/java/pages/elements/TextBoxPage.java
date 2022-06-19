@@ -1,4 +1,4 @@
-package pages.Elements;
+package pages.elements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,11 +7,11 @@ import pages.BasePage;
 
 public class TextBoxPage extends BasePage {
 
-  By fullName = By.id("userName");
-  By email = By.id("userEmail");
-  By currentAddress = By.id("currentAddress");
-  By permanentAddress = By.id("permanentAddress");
-  By submit = By.id("submit");
+  private By fullName = By.id("userName");
+  private By email = By.id("userEmail");
+  private By currentAddress = By.id("currentAddress");
+  private By permanentAddress = By.id("permanentAddress");
+  private By submit = By.id("submit");
 
   public TextBoxPage(WebDriver driver, WebDriverWait webDriverWait) {
     super(driver, webDriverWait);

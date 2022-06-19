@@ -10,7 +10,7 @@ public class BasePage {
   private WebDriver driver;
   private WebDriverWait driverWait;
 
-  private static final String HOME_URL = "https://demoqa.com/";
+  private final String HOME_URL = "https://demoqa.com/";
 
   public BasePage(WebDriver driver, WebDriverWait webDriverWait) {
     this.driver = driver;
