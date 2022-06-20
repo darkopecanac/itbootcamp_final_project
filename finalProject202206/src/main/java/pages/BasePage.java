@@ -12,16 +12,25 @@ public class BasePage {
 
   private final String HOME_URL = "https://demoqa.com/";
 
-  public BasePage(WebDriver driver, WebDriverWait webDriverWait) {
+  public BasePage(WebDriver driver, WebDriverWait driverWait) {
+
     this.driver = driver;
-    this.driverWait = webDriverWait;
+    this.driverWait = driverWait;
   }
 
+  /**
+   * Opens Home page
+   */
   public void openHomePage() {
+
     driver.navigate().to(HOME_URL);
   }
 
+  /**
+   * Refreshes page
+   */
   public void refreshPage() {
+
     driver.navigate().refresh();
   }
 }

@@ -15,23 +15,30 @@ public class TextBoxTests extends BaseTest {
 
   @BeforeMethod
   public void beforeMethod() {
+
     getHomePage().openSection(getHomePage().getElements());
-    getElementsPage().selectTexBox();
+    getElementsPage().selectTexBoxSubSection();
   }
+
+  /**
+   * Test Case ID: TC_E_T_001 (Look at the documentation in Test Plan.xlsx)
+   * Verifies that Text Box form with valid data is submitted.
+   */
   @Test (priority = 1)
-  public void verifySubmittingTextBoxForm() {
-//    getElementsPage().openElementsSection();
-//    getHomePage().openSection(getHomePage().getElements());
-//    getElementsPage().selectTexBox();
+  public void verifySubmittingTextBoxFormFunctionality() {
+
     Assert.assertTrue(getTextBoxPage().verifySubmittingTextBoxForm(
             fullName, email, currentAddress, permanentAddress));
   }
 
+  /**
+   * Test Case ID: TC_E_T_002 (Look at the documentation in Test Plan.xlsx)
+   * Verifies that Text Box form with invalid data (.444 in mail domain)
+   * is not submitted.
+   */
   @Test (priority = 2)
-  public void verifyNotSubmittingTextBoxFormWithInvalidData() {
-//    getElementsPage().openElementsSection();
-//    getHomePage().openSection(getHomePage().getElements());
-//    getElementsPage().selectTexBox();
+  public void verifyNotSubmittingTextBoxFormWithInvalidDataFunctionality() {
+
     Assert.assertFalse(getTextBoxPage().verifySubmittingTextBoxForm(
             fullName, emailInvalid, currentAddress, permanentAddress));
   }

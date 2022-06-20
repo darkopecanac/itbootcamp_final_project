@@ -15,21 +15,31 @@ public class HomePage extends BasePage {
   private By widgets = By.xpath("//*[@id='app']/div/div/div[2]/div/div[4]");
   private By interactions = By.xpath("//*[@id='app']/div/div/div[2]/div/div[5]");
   private By bookStoreApplication = By.xpath("//*[@id='app']/div/div/div[2]/div/div[6]");
+
   private By headerOfSection = By.xpath("//*[@id='app']/div/div/div[1]/div");
-//  private String sectionURL = getDriver().getCurrentUrl();
 
   public HomePage(WebDriver driver, WebDriverWait driverWait) {
+
     super(driver, driverWait);
   }
 
+  /**
+   * Opens desired section on Home page.
+   * @param element
+   */
   public void openSection(By element) {
+
     getDriver().findElement(element).click();
   }
 
+  /**
+   * Verifies that desired section on Home page is opened.
+   * @param element
+   * @return true if desired sections is opened.
+   */
   public boolean verifyOpenedSection(By element) {
 
     String elementString = getDriver().findElement(element).getText();
-    System.out.println(elementString);
 
     openSection(element);
 

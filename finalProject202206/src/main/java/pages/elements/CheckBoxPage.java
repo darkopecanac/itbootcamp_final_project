@@ -15,22 +15,32 @@ public class CheckBoxPage extends BasePage {
   private By privateCheckBox = By.xpath(
   "//*[@id='tree-node']/ol/li/ol/li[2]/ol/li[2]/ol/li[2]/span/label/span[1]");
 
-  public CheckBoxPage(WebDriver driver, WebDriverWait webDriverWait) {
+  public CheckBoxPage(WebDriver driver, WebDriverWait driverWait) {
 
-    super(driver, webDriverWait);
+    super(driver, driverWait);
   }
 
+  /**
+   * Checks Home check box and all sub-check boxes.
+   */
   public void checkHomeCheckBox() {
 
     getDriver().findElement(homeCheckBox).click();
   }
 
+  /**
+   * Checks Private, only one of sub-check boxes.
+   */
   public void checkPrivateCheckBox() {
 
     getDriver().findElement(expandAll).click();
     getDriver().findElement(privateCheckBox).click();
   }
 
+  /**
+   * Verifies that all check boxes are selected.
+   * @return true if all check boxes are selected.
+   */
   public boolean verifyAllCheckBoxesSelection() {
 
     String expectedString = "home desktop notes commands documents workspace react angular " +
@@ -47,6 +57,10 @@ public class CheckBoxPage extends BasePage {
     return actualString.contains(expectedString);
   }
 
+  /**
+   * Verifies that only Private check box is selected.
+   * @return true if only Private check box is selected.
+   */
   public boolean verifyPrivateCheckBoxesSelection() {
 
     String expectedString = "private";
