@@ -36,7 +36,7 @@ public class RadioButtonPage extends BasePage {
 
   /**
    * Verifies that "Yes" button is selected and "Impressive" is not.
-   * @return ture if "Yes" button is selected and "Impressive" is not
+   * @return true if "Yes" button is selected and "Impressive" is not
    * and confirmation message is displayed.
    */
   public boolean verifyYesRadioButtonSelection() {
@@ -50,7 +50,7 @@ public class RadioButtonPage extends BasePage {
 
   /**
    * Verifies that "Impressive" button is selected and "Yes" is not.
-   * @return ture if "Impressive" button is selected and "Yes" is not
+   * @return true if "Impressive" button is selected and "Yes" is not
    * and confirmation message is displayed.
    */
   public boolean verifyImpressiveRadioButtonSelection() {
